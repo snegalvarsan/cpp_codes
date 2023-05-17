@@ -14,9 +14,9 @@ void check_value_tag(string content){
     cout << "Index of tag[start] <"+tag_name+">: " << index << endl;
     int index_end = content.find(tag_name_end);
     cout << "Index of tag[end] </"+tag_name+">: " << index_end << endl;
-    int index_diff = index_end-(index+7);
+    int index_diff = index_end-(index+tag_name_start.length());
     cout << "The value inside the tag "<<tag_name<<"is:"<<endl;
-    cout << content.substr(index+7,index_diff) << endl;
+    cout << content.substr(index+tag_name_start.length(),index_diff) << endl;
 
     
 }
